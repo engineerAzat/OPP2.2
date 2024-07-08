@@ -21,5 +21,36 @@ public class Hogwarts {
     public int getTransgressionDistanse() {
         return transgressionDistanse;
     }
+
+    public String decsription(){
+        return "Имя" + name + ", сила магии: " + magicPower + ", сила трансгрессирования:" + transgressionDistanse;
+    }
+
+    public int sum(){
+        return magicPower + transgressionDistanse;
+    }
+
+    public void compare(Hogwarts other) {
+        if (magicPower > other.magicPower) {
+            System.out.println(name + " обладает большей мощностью магии, чем " + other.name);
+        } else {
+            System.out.println(other.name + " обладает большей мощностью магии, чем " + name);
+        }
+
+        if (transgressionDistanse > other.transgressionDistanse) {
+            System.out.println(name + " обладает большей дистанцией магии, чем " + other.name);
+        } else {
+            System.out.println(other.name + " обладает большей дистанцией магии, чем " + name);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Hogwarts{" +
+                "name='" + name + '\'' +
+                ", magicPower=" + magicPower +
+                ", transgressionDistanse=" + transgressionDistanse +
+                '}';
+    }
 }
 

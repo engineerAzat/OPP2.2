@@ -34,4 +34,28 @@ public class Ravenciaw extends Hogwarts{
     public int getIntelligence() {
         return intelligence;
     }
+
+    public  int sum(){
+        return creativity + witty + wisdom + intelligence;
+    }
+
+    public void compare(Ravenciaw other) {
+        var s1 = this.sum();
+        var s2 = other.sum();
+        if (s1 > s2) {
+            System.out.println(this.getName() + " лучший Когтевранец, чем " + other.getName());
+        } else {
+            System.out.println(other.getName() + " лучший Когтевранец, чем " + this.getName());
+        }
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Ravenciaw{" +
+                "creativity=" + creativity +
+                ", witty=" + witty +
+                ", wisdom=" + wisdom +
+                ", intelligence=" + intelligence +
+                '}';
+    }
 }
